@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+#taskListHorizontalContainer {
+    scrollbar-width: none;
+}
