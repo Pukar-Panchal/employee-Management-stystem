@@ -1,0 +1,298 @@
+{
+  "admin": {
+    "id": 1,
+    "name": "Admin User",
+    "email": "admin@company.com",
+    "password": "admin123"
+  },
+  "employees": [
+    {
+      "id": 2,
+      "name": "Rohit Sharma",
+      "email": "rohit@company.com",
+      "password": "pass101",
+      "tasks": [
+        {
+          "title": "Create UI Layout",
+          "date": "2025-12-01",
+          "category": "Design",
+          "description": "Design core dashboard layout for admin panel."
+        },
+        {
+          "title": "Update Color Palette",
+          "date": "2025-12-03",
+          "category": "Design",
+          "description": "Refine theme colors for better accessibility."
+        },
+        {
+          "title": "Prepare Wireframes",
+          "date": "2025-12-04",
+          "category": "Design",
+          "description": "Create wireframes for upcoming features."
+        }
+      ],
+      "taskCount": {
+        "newTask": 1,
+        "completed": 0,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "Priya Verma",
+      "email": "priya@company.com",
+      "password": "pass102",
+      "tasks": [
+        {
+          "title": "Fix Login Bug",
+          "date": "2025-12-02",
+          "category": "Development",
+          "description": "Resolve authentication issue in frontend login."
+        },
+        {
+          "title": "Optimize API Response",
+          "date": "2025-12-05",
+          "category": "Development",
+          "description": "Improve API response time by caching data."
+        },
+        {
+          "title": "Refactor User Module",
+          "date": "2025-12-06",
+          "category": "Development",
+          "description": "Enhance modularity of user service."
+        }
+      ],
+      "taskCount": {
+        "newTask": 1,
+        "completed": 2,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 4,
+      "name": "Aman Gupta",
+      "email": "aman@company.com",
+      "password": "pass103",
+      "tasks": [
+        {
+          "title": "Database Backup",
+          "date": "2025-12-03",
+          "category": "Backend",
+          "description": "Create scheduled backups for user data."
+        },
+        {
+          "title": "Update DB Schema",
+          "date": "2025-12-06",
+          "category": "Backend",
+          "description": "Add new tables for analytics module."
+        },
+        {
+          "title": "Fix Query Performance",
+          "date": "2025-12-07",
+          "category": "Backend",
+          "description": "Improve SQL query performance using indexes."
+        }
+      ],
+      "taskCount": {
+        "newTask": 2,
+        "completed": 1,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 5,
+      "name": "Sneha Patel",
+      "email": "sneha@company.com",
+      "password": "pass104",
+      "tasks": [
+        {
+          "title": "Create Banner Animation",
+          "date": "2025-12-04",
+          "category": "Frontend",
+          "description": "Use GSAP to animate homepage banners."
+        },
+        {
+          "title": "Fix Navbar Alignment",
+          "date": "2025-12-06",
+          "category": "Frontend",
+          "description": "Correct navbar alignment in mobile view."
+        },
+        {
+          "title": "Improve Form UI",
+          "date": "2025-12-08",
+          "category": "Frontend",
+          "description": "Update form UI for better UX."
+        }
+      ],
+      "taskCount": {
+        "newTask": 0,
+        "completed": 1,
+        "active": true,
+        "failed": 1
+      }
+    },
+    {
+      "id": 6,
+      "name": "Vishal Mehta",
+      "email": "vishal@company.com",
+      "password": "pass105",
+      "tasks": [
+        {
+          "title": "API Testing",
+          "date": "2025-12-05",
+          "category": "QA",
+          "description": "Test all employee CRUD APIs using Postman."
+        },
+        {
+          "title": "Prepare Test Cases",
+          "date": "2025-12-06",
+          "category": "QA",
+          "description": "Write test cases for new dashboard UI."
+        },
+        {
+          "title": "Automate Test Scripts",
+          "date": "2025-12-07",
+          "category": "QA",
+          "description": "Create automation scripts using Jest."
+        }
+      ],
+      "taskCount": {
+        "newTask": 1,
+        "completed": 0,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 7,
+      "name": "Neha Singh",
+      "email": "neha@company.com",
+      "password": "pass106",
+      "tasks": [
+        {
+          "title": "Prepare Sprint Report",
+          "date": "2025-12-06",
+          "category": "Management",
+          "description": "Create weekly progress report for team."
+        },
+        {
+          "title": "Organize Team Meeting",
+          "date": "2025-12-07",
+          "category": "Management",
+          "description": "Schedule meeting and prepare discussion points."
+        },
+        {
+          "title": "Update Project Timeline",
+          "date": "2025-12-08",
+          "category": "Management",
+          "description": "Revise timeline for sprint deliverables."
+        }
+      ],
+      "taskCount": {
+        "newTask": 1,
+        "completed": 1,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 8,
+      "name": "Karan Patel",
+      "email": "karan@company.com",
+      "password": "pass107",
+      "tasks": [
+        {
+          "title": "Optimize Images",
+          "date": "2025-12-07",
+          "category": "Frontend",
+          "description": "Compress and optimize images for homepage."
+        },
+        {
+          "title": "Fix Rendering Issue",
+          "date": "2025-12-08",
+          "category": "Frontend",
+          "description": "Resolve slow rendering in product grid."
+        },
+        {
+          "title": "Add Dark Mode",
+          "date": "2025-12-09",
+          "category": "Frontend",
+          "description": "Implement dark mode using Tailwind CSS."
+        }
+      ],
+      "taskCount": {
+        "newTask": 0,
+        "completed": 2,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 9,
+      "name": "Divya Kapoor",
+      "email": "divya@company.com",
+      "password": "pass108",
+      "tasks": [
+        {
+          "title": "Write Unit Tests",
+          "date": "2025-12-08",
+          "category": "QA",
+          "description": "Write Jest tests for user module."
+        },
+        {
+          "title": "Mock API Testing",
+          "date": "2025-12-09",
+          "category": "QA",
+          "description": "Test user flows using mock API."
+        },
+        {
+          "title": "Fix Failing Test Cases",
+          "date": "2025-12-10",
+          "category": "QA",
+          "description": "Resolve issues in failing unit tests."
+        }
+      ],
+      "taskCount": {
+        "newTask": 1,
+        "completed": 1,
+        "active": true,
+        "failed": 0
+      }
+    },
+    {
+      "id": 10,
+      "name": "Harsh Jain",
+      "email": "harsh@company.com",
+      "password": "pass109",
+      "tasks": [
+        {
+          "title": "Deploy App",
+          "date": "2025-12-09",
+          "category": "DevOps",
+          "description": "Deploy React app to Netlify and configure redirects."
+        },
+        {
+          "title": "Setup CI/CD Pipeline",
+          "date": "2025-12-10",
+          "category": "DevOps",
+          "description": "Configure automated build and deployment pipeline."
+        },
+        {
+          "title": "Monitor App Logs",
+          "date": "2025-12-11",
+          "category": "DevOps",
+          "description": "Check logs for errors and performance issues."
+        }
+      ],
+      "taskCount": {
+        "newTask": 0,
+        "completed": 1,
+        "active": true,
+        "failed": 0
+      }
+    }
+  ]
+}
