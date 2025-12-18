@@ -2,13 +2,13 @@ import React, { children, createContext, useEffect, useState } from "react";
 import Data from "../Util/LocalStorage.json";
 export const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
+ const AuthProvider = ({ children }) => {
   // this are the local data
   const [employeeData, setEmployeeData] = useState([]);
   const [adminData, setAdminData] = useState();
   // this is the useState witch have who was logedin admin or employee for page routing
   const [user, setUser] = useState(null);
-  // this is the useState which have employee personal data (like: name and tasks)
+  // this is the useState which have employee personal data (like: name and tasks, role)
   const [loggedInEmployeeData, setLoggedInEmployeeData] = useState();
   useEffect(() => {
     const employee = localStorage.getItem("employeeDataJ");

@@ -34,7 +34,7 @@
       "taskCount": {
         "newTask": 1,
         "completed": 0,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -66,7 +66,7 @@
       "taskCount": {
         "newTask": 1,
         "completed": 2,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -98,7 +98,7 @@
       "taskCount": {
         "newTask": 2,
         "completed": 1,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -130,7 +130,7 @@
       "taskCount": {
         "newTask": 0,
         "completed": 1,
-        "active": true,
+        "active": 1,
         "failed": 1
       }
     },
@@ -162,7 +162,7 @@
       "taskCount": {
         "newTask": 1,
         "completed": 0,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -194,7 +194,7 @@
       "taskCount": {
         "newTask": 1,
         "completed": 1,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -226,7 +226,7 @@
       "taskCount": {
         "newTask": 0,
         "completed": 2,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -258,7 +258,7 @@
       "taskCount": {
         "newTask": 1,
         "completed": 1,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     },
@@ -290,7 +290,7 @@
       "taskCount": {
         "newTask": 0,
         "completed": 1,
-        "active": true,
+        "active": 1,
         "failed": 0
       }
     }

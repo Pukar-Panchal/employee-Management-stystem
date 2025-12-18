@@ -1,47 +1,63 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Context/AuthProvider";
+import NewTask from "../TaskList/NewTask";
 
 const AdminDashBoardFrom = () => {
   const { employeeData, setEmployeeData } = useContext(AuthContext);
+  const [assignTo, setAssignTo] = useState("");
   const [formData, setFormData] = useState({
     title: "",
     date: "",
-    assignTo: "",
     category: "",
     description: "",
   });
   const adminDashBoardFromHandler = (e) => {
     e.preventDefault();
 
-    const taskGivenToEmplyee = employeeData.map((emp) => {
-      if (emp.name.toLowerCase() === formData.assignTo.toLowerCase()) {
+    // const updatedEmployeeData = employeeData.map((emp) => {
+    //   if (emp.name.toLowerCase() === formData.assignTo.toLowerCase()) {
+    //     return {
+    //       ...emp,
+    //       tasks: [...emp.tasks, { ...formData }],
+    //       taskCount: {
+    //         ...emp.taskCount,
+    //         newTask: emp.taskCount.newTask + 1,
+    //       },
+    //     };
+    //   }
+    //   return emp;
+    // });
+
+    const updatedEmployeeData = employeeData.map((emp) => {
+      if(emp.name.toLowerCase() === assignTo.toLowerCase()) {
         return {
           ...emp,
-          tasks: [...emp.tasks, {...formData}],
+          tasks : [...emp.tasks, {...formData}],
           taskCount: {
             ...emp.taskCount,
-            newTask: emp.taskCount.newTask + 1,
-          },
-        };
+            newTask : emp.taskCount.newTask +1
+          } 
+        }
       }
       return emp;
     });
 
-    console.log(taskGivenToEmplyee);
-    localStorage.setItem("employeeDataJ", JSON.stringify(taskGivenToEmplyee));
-    setEmployeeData(taskGivenToEmplyee);
+    localStorage.setItem("employeeDataJ", JSON.stringify(updatedEmployeeData));
+    setEmployeeData(updatedEmployeeData);
+    console.log(updatedEmployeeData.find(e => e.name.toLowerCase() === assignTo.toLowerCase()))
 
     // reset form
     setFormData({
       title: "",
       date: "",
-      assignTo: "",
       category: "",
       description: "",
     });
+    setAssignTo("");
   };
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const name = e.target.name;
+    const value = e.target.value;
     // prev => prev this same as prev => {return prev};
     // this previousFormData is the old object of useState like (title:, or date) this saprate (...) here becouse it paste again old data as object to store new data init
     setFormData((previousFormData) => ({
@@ -66,6 +82,7 @@ const AdminDashBoardFrom = () => {
               className="border border-gray-500 bg-transparent p-3 rounded-lg outline-none focus:border-[#53B587] transition"
               type="text"
               name="title"
+              // react do this (onChange={handleChange}) to automatically to this (onChange={(e)=>{handleChange(e)}})
               onChange={handleChange}
               value={formData.title}
             />
@@ -90,8 +107,8 @@ const AdminDashBoardFrom = () => {
               className="border border-gray-500 bg-transparent p-3 rounded-lg outline-none focus:border-[#53B587] transition"
               type="text"
               name="assignTo"
-              onChange={handleChange}
-              value={formData.assignTo}
+              onChange={(e)=>{setAssignTo(e.target.value)}}
+              value={assignTo}
             />
           </div>
 
