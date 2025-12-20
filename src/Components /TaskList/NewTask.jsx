@@ -1,7 +1,13 @@
 import React, { useContext } from "react";
+import { AuthContext } from "../../Context/AuthProvider";
+import {acceptButton} from "../../HelperFunction/newTaskButton"
 
 const NewTask = ({employeeLoggedInData}) => {
-    
+    const {employeeData, setEmployeeData, loggedInEmployeeData, setLoggedInEmployeeData} = useContext(AuthContext)
+
+    const newTaskacceptButton = () => {
+      acceptButton(employeeData, setEmployeeData, loggedInEmployeeData, setLoggedInEmployeeData)
+    }
   return (
     <>
       {employeeLoggedInData.tasks.map((task, key) => (
@@ -32,7 +38,8 @@ const NewTask = ({employeeLoggedInData}) => {
             </div>
           </div>
           <div className="flex w-full justify-center absolute bottom-[10px] flex justify-center items-center">
-            <button className="px-[100px] py-2 bg-green-500 text-white rounded-xl cursor-pointer hover:bg-green-600 transition">
+            <button className="px-[100px] py-2 bg-green-500 text-white rounded-xl cursor-pointer hover:bg-green-600 transition"
+            onClick={newTaskacceptButton}>
               Accept 
             </button>
             {/* its for reject task if you reject the task you should give a reason */}

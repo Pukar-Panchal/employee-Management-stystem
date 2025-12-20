@@ -24,10 +24,10 @@ function App() {
     }
     if (employee) {
       const employeeObj = {
+        id: employee.id,
         name: employee.name,
         role: "employee",
         email: employee.email,
-        employeeId: employee.id,
         tasks: employee.tasks,
         taskCount: employee.taskCount,
       };

@@ -1,9 +1,19 @@
 import React, { useContext } from "react";
+import { AuthContext } from "../../Context/AuthProvider";
+import { failedButton, completeButton } from "../../HelperFunction/acceptButton"
 
-const AcceptTask = ({employeeLoggedInData}) => {
+const AcceptTask = ({ employeeLoggedInData }) => {
+  const {employeeData, setEmployeeData, loggedInEmployeeData, setLoggedInEmployeeData} = useContext(AuthContext);
+
+  const AcceptTaskFailedButton = () => {
+    failedButton(employeeData, setEmployeeData, loggedInEmployeeData, setLoggedInEmployeeData)
+  }
+  const AcceptTaskCompleteButton = () => {
+    completeButton(employeeData, setEmployeeData, loggedInEmployeeData, setLoggedInEmployeeData)
+  }
   return (
     <>
-      {employeeLoggedInData.tasks.map((task, key) => (
+      {employeeLoggedInData?.tasks.map((task, key) => (
         <div
           key={key}
           id="taskCard"
@@ -32,10 +42,14 @@ const AcceptTask = ({employeeLoggedInData}) => {
             </div>
           </div>
           <div className="flex w-full justify-center items-center absolute bottom-[10px] gap-5">
-            <button className="px-5 py-2 bg-green-500 text-white rounded-xl cursor-pointer hover:bg-green-600 transition">
+            <button className="px-5 py-2 bg-green-500 text-white rounded-xl cursor-pointer hover:bg-green-600 transition" 
+            onClick={AcceptTaskCompleteButton}>
               Completed
             </button>
-            <button className="px-5 py-2 bg-red-500 text-white rounded-xl cursor-pointer hover:bg-red-600 transition">
+            <button
+              className="px-5 py-2 bg-red-500 text-white rounded-xl cursor-pointer hover:bg-red-600 transition"
+              onClick={AcceptTaskFailedButton}
+            >
               Failed
             </button>
           </div>
